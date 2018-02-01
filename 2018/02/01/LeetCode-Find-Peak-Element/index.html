@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/2 | 黄占杰</title>
+  <title>[LeetCode]Find Peak Element | 黄占杰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="黄占杰">
-<meta property="og:url" content="http://yoursite.com/archives/2018/02/index.html">
+  <meta name="description" content="题目描述：A peak element is an element that is greater than its neighbors. Given an input array where num[i] ≠ num[i+1], find a peak element and return its index. The array may contain multiple peaks, in t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[LeetCode]Find Peak Element">
+<meta property="og:url" content="http://yoursite.com/2018/02/01/LeetCode-Find-Peak-Element/index.html">
 <meta property="og:site_name" content="黄占杰">
+<meta property="og:description" content="题目描述：A peak element is an element that is greater than its neighbors. Given an input array where num[i] ≠ num[i+1], find a peak element and return its index. The array may contain multiple peaks, in t">
+<meta property="og:updated_time" content="2018-02-01T12:25:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黄占杰">
+<meta name="twitter:title" content="[LeetCode]Find Peak Element">
+<meta name="twitter:description" content="题目描述：A peak element is an element that is greater than its neighbors. Given an input array where num[i] ≠ num[i+1], find a peak element and return its index. The array may contain multiple peaks, in t">
   
   
     <link rel="icon" href="/favicon.png">
@@ -151,157 +155,189 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-LeetCode-Find-Peak-Element" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/01/photo2/" class="archive-article-date">
-  	<time datetime="2018-02-01T13:18:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/01/photo2/">photo2</a>
+    <h1 class="article-title" itemprop="name">
+      [LeetCode]Find Peak Element
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/01/photo1/" class="archive-article-date">
-  	<time datetime="2018-02-01T12:35:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/01/photo1/">photo1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/01/LeetCode-Find-Peak-Element/" class="archive-article-date">
+        
+        <a href="/2018/02/01/LeetCode-Find-Peak-Element/" class="archive-article-date">
   	<time datetime="2018-02-01T12:13:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/01/LeetCode-Find-Peak-Element/">[LeetCode]Find Peak Element</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>A peak element is an element that is greater than its neighbors.</p>
+<p>Given an input array where num[i] ≠ num[i+1], find a peak element and return its index.</p>
+<p>The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.</p>
+<p>You may imagine that num[-1] = num[n] = -∞.</p>
+<p>For example, in array [1, 2, 3, 1], 3 is a peak element and your function should return the index number 2.</p>
+<p>Note:</p>
+<p>Your solution should be in logarithmic complexity.</p>
+<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>“峰值元素”是指值大于邻居的元素</p>
+<p>输入一个数组num[i] ≠ num[i+1]，找到一个峰值元素并返回其下标。</p>
+<p>数组可能包含多个峰值，这种情况下返回其中任意一个即可。</p>
+<p>可以假设num[-1] = num[n] = -∞（开始元素的左侧和末尾元素的右侧均为负无穷大）<br>例如，数组[1, 2, 3, 1]中，3是峰值元素，你的函数应该返回下。标2</p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>解决方案最好为对数复杂度。</p>
+<h3 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h3><p>Brute Force暴力枚举，线性复杂度 O（n）</p>
+<p>二分法，对数复杂度O（log n）</p>
+<h2 id="Python代码："><a href="#Python代码：" class="headerlink" title="Python代码："></a>Python代码：</h2><h3 id="二分法O（log-n）版本："><a href="#二分法O（log-n）版本：" class="headerlink" title="二分法O（log n）版本："></a>二分法O（log n）版本：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span> <span class="comment"># @param num, a list of integer # @return an integerdef </span></span><br><span class="line">findPeakElement(self, num): </span><br><span class="line"> size = len(num)</span><br><span class="line"> <span class="keyword">return</span> self.search(num, <span class="number">0</span>, size - <span class="number">1</span>)</span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(self, num, start, end)</span>:</span>  <span class="keyword">if</span> start == end:</span><br><span class="line"> <span class="keyword">return</span> start</span><br><span class="line"><span class="keyword">if</span> start + <span class="number">1</span> == end:</span><br><span class="line"><span class="keyword">return</span> [start, end][num[start] &lt; num[end]]</span><br><span class="line">mid = (start + end) / <span class="number">2</span></span><br><span class="line"><span class="keyword">if</span> num[mid] &lt; num[mid - <span class="number">1</span>]:</span><br><span class="line"> <span class="keyword">return</span> self.search(num, start, mid - <span class="number">1</span>)</span><br><span class="line"><span class="keyword">if</span> num[mid] &lt; num[mid + <span class="number">1</span>]:</span><br><span class="line"><span class="keyword">return</span> self.search(num, mid + <span class="number">1</span>, end)</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> mid</span><br></pre></td></tr></table></figure>
+<h3 id="线性暴力枚举O（n）版本："><a href="#线性暴力枚举O（n）版本：" class="headerlink" title="线性暴力枚举O（n）版本："></a>线性暴力枚举O（n）版本：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span> <span class="comment"># @param num, a list of integer # @return an integer </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findPeakElement</span><span class="params">(self, num)</span>:</span></span><br><span class="line"> size = len(num) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, size - <span class="number">1</span>): </span><br><span class="line"> <span class="keyword">if</span> num[x] &gt; num[x - <span class="number">1</span>] <span class="keyword">and</span> num[x] &gt; num[x + <span class="number">1</span>]:</span><br><span class="line">  <span class="keyword">return</span> x </span><br><span class="line">  <span class="keyword">return</span> [<span class="number">0</span>, size - <span class="number">1</span>][num[<span class="number">0</span>] &lt; num[size - <span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/02/01/LeetCode-Find-Peak-Element/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/01/java中-System-in-read-的用法/" class="archive-article-date">
-  	<time datetime="2018-02-01T12:06:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/02/01/photo1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          photo1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/01/java中-System-in-read-的用法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java中 System.in.read()的用法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/01/java中-System-in-read-的用法/">java中 System.in.read()的用法</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/01/商/" class="archive-article-date">
-  	<time datetime="2018-02-01T11:23:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/01/商/">商</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -324,8 +360,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
