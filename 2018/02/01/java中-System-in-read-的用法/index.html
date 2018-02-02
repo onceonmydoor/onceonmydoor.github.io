@@ -6,15 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>java中 System.in.read()的用法 | 黄占杰</title>
+  <title>java中 System.in.read()的用法 | onceonmydoor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="用读取键盘输入必须构建  1。输入流   System.in;  2。字符输入流   InputStreamReader  3。缓存输入流   BufferedReader  4。缓存输入流方法   readLine()//中文意思：读一行(遇上enter键)  代码：BufferedReader   reader=new   BufferedReader(new   InputStreamRe">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java中 System.in.read()的用法">
 <meta property="og:url" content="http://yoursite.com/2018/02/01/java中-System-in-read-的用法/index.html">
-<meta property="og:site_name" content="黄占杰">
+<meta property="og:site_name" content="onceonmydoor">
 <meta property="og:description" content="用读取键盘输入必须构建  1。输入流   System.in;  2。字符输入流   InputStreamReader  3。缓存输入流   BufferedReader  4。缓存输入流方法   readLine()//中文意思：读一行(遇上enter键)  代码：BufferedReader   reader=new   BufferedReader(new   InputStreamRe">
-<meta property="og:updated_time" content="2018-02-01T12:25:33.358Z">
+<meta property="og:updated_time" content="2018-02-02T09:36:53.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java中 System.in.read()的用法">
 <meta name="twitter:description" content="用读取键盘输入必须构建  1。输入流   System.in;  2。字符输入流   InputStreamReader  3。缓存输入流   BufferedReader  4。缓存输入流方法   readLine()//中文意思：读一行(遇上enter键)  代码：BufferedReader   reader=new   BufferedReader(new   InputStreamRe">
@@ -47,7 +47,7 @@
 			<img src="/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">hzj</a></h1>
+		  <h1 class="header-author"><a href="/">黄占杰</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">自己的小窝QAQ</p>
@@ -105,7 +105,7 @@
 				<img src="/img/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">hzj</h1>
+			  <h1 class="header-author js-header-author">黄占杰</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>自己的小窝QAQ<i class="icon icon-quo-right"></i></p>
@@ -171,7 +171,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> 用读取键盘输入必须构建<br>  1。输入流   System.in;<br>  2。字符输入流   InputStreamReader<br>  3。缓存输入流   BufferedReader<br>  4。缓存输入流方法   readLine()//中文意思：读一行(遇上enter键)<br>  代码：BufferedReader   reader=new   BufferedReader(new   InputStreamReader(System.in));<br>System.in.read()返回一个整型字节数据，该数据表示的是字节因此是Unicode的第一个字节或是字符的ASCII码值。该方法是从一个流中一个一个的读取数据，因此是一个迭代的过程。我们可以看出in是一个静态的流，因此在该程序中只有一个流，重复调用System.in.read()实际上是在遍历该流中的每一个字节数据。最常见的流是键盘输入流。我们可以在键盘中输入一个字符串（其中按下回车键代表了两个字符\r\n,\r的ASCII码值是10，\n是13）。我们可以重复调用System.in.read()来读取从键盘输入的字符串中的字符所代表的字节（ASCII值）。<br>public final class System extends Object<br>System 类包含一些有用的类字段和方法。它不能被实例化。<br>在 System 类提供的设施中，有标准输入、标准输出和错误输出流；对外部定义的属性和环境变量的访问；加载文件和库的方法；还有快速复制数组的一部分的实用方法。<br>public static final InputStream in<br>“标准”输入流。此流已打开并准备提供输入数据。通常，此流对应于键盘输入或者由主机环境或用户指定的另一个输入源。</p>
+        <p> 用读取键盘输入必须构建<br>  1。输入流   System.in;<br>  2。字符输入流   InputStreamReader<br>  3。缓存输入流   BufferedReader<br>  4。缓存输入流方法   readLine()//中文意思：读一行(遇上enter键)<br>  代码：BufferedReader   reader=new   BufferedReader(new   InputStreamReader(System.in));<br>System.in.read()返回一个整型字节数据，该数据表示的是字节因此是Unicode的第一个字节或是字符的ASCII码值。该方法是从一个流中一个一个的读取数据，因此是一个迭代的过程。我们可以看出in是一个静态的流，因此在该程序中只有一个流，重复调用System.in.read()实际上是在遍历该流中的每一个字节数据。最常见的流是键盘输入流。我们可以在键盘中输入一个字符串（其中按下回车键代表了两个字符\r\n,\r的ASCII码值是10，\n是13）。我们可以重复调用System.in.read()来读取从键盘输入的字符串中的字符所代表的字节（ASCII值）。<br>public final class System extends Object<br>System 类包含一些有用的类字段和方法。它不能被实例化。<br>在 System 类提供的设施中，有标准输入、标准输出和错误输出流；对外部定义的属性和环境变量的访问；加载文件和库的方法；还有快速复制数组的一部分的实用方法。<br>public static final InputStream in<br>“标准”输入流。此流已打开并准备提供输入数据。通常，此流对应于键盘输入或者由主机环境或用户指定的另一个输入源。<br><a id="more"></a></p>
 <h2 id="read"><a href="#read" class="headerlink" title="read"></a>read</h2><p>public abstract int read()                    throws IOException<br>从输入流中读取数据的下一个字节。返回 0 到 255 范围内的 int 字节值。如果因为已经到达流末尾而没有可用的字节，则返回值 -1。在输入数据可用、检测到流末尾或者抛出异常前，此方法一直阻塞。<br>子类必须提供此方法的一个实现。</p>
 <h3 id="返回："><a href="#返回：" class="headerlink" title="返回："></a>返回：</h3><p>下一个数据字节；如果到达流的末尾，则返回 -1。</p>
 <h3 id="抛出："><a href="#抛出：" class="headerlink" title="抛出："></a>抛出：</h3><h2 id="IOException-如果发生-I-O-错误。"><a href="#IOException-如果发生-I-O-错误。" class="headerlink" title="IOException - 如果发生 I/O 错误。"></a>IOException - 如果发生 I/O 错误。</h2><h2 id="read-1"><a href="#read-1" class="headerlink" title="read"></a>read</h2><p>public int read(byte[] b)          throws IOException<br>从输入流中读取一定数量的字节，并将其存储在缓冲区数组 b 中。以整数形式返回实际读取的字节数。在输入数据可用、检测到文件末尾或者抛出异常前，此方法一直阻塞。<br>如果 b 的长度为 0，则不读取任何字节并返回 0；否则，尝试读取至少一个字节。如果因为流位于文件末尾而没有可用的字节，则返回值 -1；否则，至少读取一个字节并将其存储在 b 中。<br>将读取的第一个字节存储在元素 b[0] 中，下一个存储在 b[1] 中，依次类推。读取的字节数最多等于 b 的长度。设 k 为实际读取的字节数；这些字节将存储在 b[0] 到 b[k-1] 的元素中，不影响 b[k] 到 b[b.length-1] 的元素。<br>类 InputStream 的 read(b) 方法的效果等同于：<br>read(b, 0, b.length)</p>
@@ -345,7 +345,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 hzj
+    		&copy; 2018 黄占杰
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
