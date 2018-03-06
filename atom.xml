@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://onceonmydoor.github.io/"/>
-  <updated>2018-03-06T10:28:12.000Z</updated>
+  <updated>2018-03-06T10:29:11.000Z</updated>
   <id>https://onceonmydoor.github.io/</id>
   
   <author>
@@ -21,17 +21,15 @@
     <link href="https://onceonmydoor.github.io/2018/03/06/%E5%88%9D%E5%AD%A6%E5%AE%89%E5%8D%93/"/>
     <id>https://onceonmydoor.github.io/2018/03/06/初学安卓/</id>
     <published>2018-03-06T10:25:03.000Z</published>
-    <updated>2018-03-06T10:28:12.000Z</updated>
+    <updated>2018-03-06T10:29:11.000Z</updated>
     
-    <content type="html"><![CDATA[<p>##Android fill_parent、wrap_content和match_parent的区别<br>三个属性都用来适应视图的水平或垂直大小，一个以视图的内容或尺寸为基础的布局比精确地指定视图范围更加方便。</p><p>###1）fill_parent</p><p>设置一个构件的布局为fill_parent将强制性地使构件扩展，以填充布局单元内尽可能多的空间。这跟Windows控件的dockstyle属性大体一致。设置一个顶部布局或控件为fill_parent将强制性让它布满整个屏幕。</p><p>###2） wrap_content</p><p>设置一个视图的尺寸为wrap_content将强制性地使视图扩展以显示全部内容。以TextView和ImageView控件为例，设置为wrap_content将完整显示其内部的文本和图像。布局元素将根据内容更改大小。设置一个视图的尺寸为wrap_content大体等同于设置Windows控件的Autosize属性为True。</p><p>###3）match_parent<br>   Android2.2中match_parent和fill_parent是一个意思 .两个参数意思一样，match_parent更贴切，于是从2.2开始两个词都可以用。那么如果考虑低版本的使用情况你就需要用fill_parent了</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Android-fill-parent、wrap-content和match-parent的区别"><a href="#Android-fill-parent、wrap-content和match-parent的区别" class="headerlink" title="Android fill_parent、wrap_content和match_parent的区别"></a>Android fill_parent、wrap_content和match_parent的区别</h2><p>三个属性都用来适应视图的水平或垂直大小，一个以视图的内容或尺寸为基础的布局比精确地指定视图范围更加方便。</p><h3 id="1）fill-parent"><a href="#1）fill-parent" class="headerlink" title="1）fill_parent"></a>1）fill_parent</h3><p>设置一个构件的布局为fill_parent将强制性地使构件扩展，以填充布局单元内尽可能多的空间。这跟Windows控件的dockstyle属性大体一致。设置一个顶部布局或控件为fill_parent将强制性让它布满整个屏幕。</p><h3 id="2）-wrap-content"><a href="#2）-wrap-content" class="headerlink" title="2） wrap_content"></a>2） wrap_content</h3><p>设置一个视图的尺寸为wrap_content将强制性地使视图扩展以显示全部内容。以TextView和ImageView控件为例，设置为wrap_content将完整显示其内部的文本和图像。布局元素将根据内容更改大小。设置一个视图的尺寸为wrap_content大体等同于设置Windows控件的Autosize属性为True。</p><h3 id="3）match-parent"><a href="#3）match-parent" class="headerlink" title="3）match_parent"></a>3）match_parent</h3><p>   Android2.2中match_parent和fill_parent是一个意思 .两个参数意思一样，match_parent更贴切，于是从2.2开始两个词都可以用。那么如果考虑低版本的使用情况你就需要用fill_parent了</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;##Android fill_parent、wrap_content和match_parent的区别&lt;br&gt;三个属性都用来适应视图的水平或垂直大小，一个以视图的内容或尺寸为基础的布局比精确地指定视图范围更加方便。&lt;/p&gt;
-&lt;p&gt;###1）fill_parent&lt;/p&gt;
-&lt;p
+        &lt;h2 id=&quot;Android-fill-parent、wrap-content和match-parent的区别&quot;&gt;&lt;a href=&quot;#Android-fill-parent、wrap-content和match-parent的区别&quot; class=&quot;headerlink&quot; tit
       
     
     </summary>
