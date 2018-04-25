@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://onceonmydoor.github.io">
-  <title>墓床 | onceonmydoor</title>
+  <title>FileOutputStream和FileInputStream的使用 | onceonmydoor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我知道永逝降临，并不悲伤松林中安放着我的愿望下边有海，远看像水池一点点跟我的是下午的阳光　　人时已尽，人世很长我在中间应当休息走过的人说树枝低了走过的人说树枝在长 --顾城">
+  <meta name="description" content="Context提供如下两种方法来打开应用程序的数据文件夹里的文件IO流。 1.FileOutputStream openFileOutput(String name,int mode)::打开应用程序的数据文件夹下的name文件对应输出流； 2.FileInputStream openFileInput(String name)::打开应用程序的数据文件夹下name文件对应输出流。 int mod">
 <meta property="og:type" content="article">
-<meta property="og:title" content="墓床">
-<meta property="og:url" content="https://onceonmydoor.github.io/2018/04/02/墓床/index.html">
+<meta property="og:title" content="FileOutputStream和FileInputStream的使用">
+<meta property="og:url" content="https://onceonmydoor.github.io/2018/04/25/FileOutputStream和FileInputStream的使用/index.html">
 <meta property="og:site_name" content="onceonmydoor">
-<meta property="og:description" content="我知道永逝降临，并不悲伤松林中安放着我的愿望下边有海，远看像水池一点点跟我的是下午的阳光　　人时已尽，人世很长我在中间应当休息走过的人说树枝低了走过的人说树枝在长 --顾城">
-<meta property="og:updated_time" content="2018-04-02T13:59:27.476Z">
+<meta property="og:description" content="Context提供如下两种方法来打开应用程序的数据文件夹里的文件IO流。 1.FileOutputStream openFileOutput(String name,int mode)::打开应用程序的数据文件夹下的name文件对应输出流； 2.FileInputStream openFileInput(String name)::打开应用程序的数据文件夹下name文件对应输出流。 int mod">
+<meta property="og:updated_time" content="2018-04-25T02:04:33.044Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="墓床">
-<meta name="twitter:description" content="我知道永逝降临，并不悲伤松林中安放着我的愿望下边有海，远看像水池一点点跟我的是下午的阳光　　人时已尽，人世很长我在中间应当休息走过的人说树枝低了走过的人说树枝在长 --顾城">
+<meta name="twitter:title" content="FileOutputStream和FileInputStream的使用">
+<meta name="twitter:description" content="Context提供如下两种方法来打开应用程序的数据文件夹里的文件IO流。 1.FileOutputStream openFileOutput(String name,int mode)::打开应用程序的数据文件夹下的name文件对应输出流； 2.FileInputStream openFileInput(String name)::打开应用程序的数据文件夹下name文件对应输出流。 int mod">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -151,29 +151,53 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-墓床" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="file-FileOutputStream和FileInputStream的使用" class="article article-type-file " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      墓床
+      FileOutputStream和FileInputStream的使用
     </h1>
   
 
         
-        <a href="/2018/04/02/墓床/" class="archive-article-date">
-  	<time datetime="2018-04-02T13:58:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-02</time>
+        <a href="/2018/04/25/FileOutputStream和FileInputStream的使用/" class="archive-article-date">
+  	<time datetime="2018-04-25T02:03:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我知道永逝降临，并不悲伤<br>松林中安放着我的愿望<br>下边有海，远看像水池<br>一点点跟我的是下午的阳光<br>　　<br>人时已尽，人世很长<br>我在中间应当休息<br>走过的人说树枝低了<br>走过的人说树枝在长</p>
-<pre><code>--顾城
-</code></pre>
+        <p>Context提供如下两种方法来打开应用程序的数据文件夹里的文件IO流。</p>
+<p>1.FileOutputStream openFileOutput(String name,int mode)::打开应用程序的数据文件夹下的name文件对应输出流；</p>
+<p>2.FileInputStream openFileInput(String name)::打开应用程序的数据文件夹下name文件对应输出流。</p>
+<p>int mode 制定打开文件的模式：</p>
+<p>a.MODE_PRIVATE:该文件只能被当前程读写；</p>
+<p>b.MODE_APPEND:以追加方式打开文件，应用可以向该文件追加内容；</p>
+<p>c.MODE_WORLD_READABLE:该文件内容可被其他应用读取；</p>
+<p>d.MODE_WORLD_WRITEABLE:该文件的内容可由其他程序读写；</p>
+<p>在访问应用程序的数据文件夹中，context还提供如下方法来访问</p>
+<p>a.getDir(String name,int mode):在应用程序的数据文件夹下获取或者创建name对应的子目录；</p>
+<p>b. File getFilesDir():获取该应用程序的数据文件夹的绝对路径；</p>
+<p>c. String[] fileList():返回该应用程序的数据文件夹下的全部文件；</p>
+<p>d.deleteFile(String):删除该应用程序的数据文件夹下的指定文件。</p>
+<p>本程序示范如何读写程序数据文件夹下的文件，布局中包括两个按钮，一个是写入，一个写出。还有两个输入文本框，在editText1中写出数据，按下写入后，点击读取，写入的信息就会在editText2上显示。<br>```java<br>package com.example.filedemo;</p>
+<p>import java.io.FileInputStream;<br>import java.io.FileNotFoundException;<br>import java.io.FileOutputStream;<br>import java.io.PrintStream;</p>
+<p>import android.os.Bundle;<br>import android.view.View;<br>import android.view.View.OnClickListener;<br>import android.widget.Button;<br>import android.widget.EditText;<br>import android.app.Activity;</p>
+<p>public class MainActivity extends Activity {<br>private static final String FILE_NAME = “sky_brian”;</p>
+<p>@Override<br>protected void onCreate(Bundle savedInstanceState) {<br>super.onCreate(savedInstanceState);<br>setContentView(R.layout.main);<br>System.out.println(new StringBuilder(“a”).append(“b”).append(“c”)<br>.toString());<br>// 获取两个按钮<br>Button write = (Button) findViewById(R.id.write);<br>Button read = (Button) findViewById(R.id.read);<br>// 获取两个输入框<br>final EditText editText1 = (EditText) findViewById(R.id.editText1);<br>final EditText editText2 = (EditText) findViewById(R.id.editText2);<br>// 为write 按钮绑定监听器<br>write.setOnClickListener(new OnClickListener() {</p>
+<p>@Override<br>public void onClick(View v) {<br>// TODO Auto-generated method stub<br>// 将editText1中的内容写入文件中<br>write(editText1.getText().toString());<br>editText1.setText(“”);<br>}<br>});</p>
+<p>read.setOnClickListener(new OnClickListener() {</p>
+<p>@Override<br>public void onClick(View v) {<br>// TODO Auto-generated method stub<br>// 读取制定文件中的内容，并显示出来<br>editText2.setText(read());<br>}<br>});<br>}</p>
+<p>//读取文件<br>private String read(){</p>
+<p>try {<br>//打开文件输入流<br>FileInputStream fis = openFileInput(FILE_NAME);<br>byte[] buff = new byte[1024];<br>int hasRead = 0;<br>StringBuilder sb = new StringBuilder(“”);<br>while((hasRead = fis.read(buff))&gt;0){<br>sb.append(new String(buff,0,hasRead));<br>}<br>return sb.toString();<br>} catch (Exception e) {<br>// TODO Auto-generated catch block<br>e.printStackTrace();<br>}</p>
+<p>return null;<br>}</p>
+<p>private void write(String content){<br>try {<br>//以追加的模式打开文件输出流<br>FileOutputStream fos = openFileOutput(FILE_NAME ,MODE_APPEND);<br>//将FileOutputStream包装成printStream<br>PrintStream ps = new PrintStream(fos);<br>//输出文件内容<br>ps.println(content);<br>ps.close();</p>
+<p>} catch (FileNotFoundException e) {<br>// TODO Auto-generated catch block<br>e.printStackTrace();<br>}<br>}<br>}</p>
+
       
 
       
@@ -262,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://onceonmydoor.github.io/2018/04/02/墓床/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://onceonmydoor.github.io/2018/04/25/FileOutputStream和FileInputStream的使用/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -276,18 +300,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/25/FileOutputStream和FileInputStream的使用/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/25/如何倾听“年轻的声音”/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          FileOutputStream和FileInputStream的使用
+          如何倾听“年轻的声音”?
         
       </div>
     </a>
   
   
-    <a href="/2018/03/06/初学安卓/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">初学安卓</div>
+    <a href="/2018/04/02/墓床/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">墓床</div>
       <i class="icon-circle-right"></i>
     </a>
   

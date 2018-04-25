@@ -150,6 +150,142 @@
             
 
   
+    <article id="post-LeetCode-Find-Peak-Element" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/01/LeetCode-Find-Peak-Element/">[LeetCode]Find Peak Element</a>
+    </h1>
+  
+
+        
+        <a href="/2018/02/01/LeetCode-Find-Peak-Element/" class="archive-article-date">
+  	<time datetime="2018-02-01T12:13:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>A peak element is an element that is greater than its neighbors.</p>
+<p>Given an input array where num[i] ≠ num[i+1], find a peak element and return its index.</p>
+<p>The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.</p>
+<p>You may imagine that num[-1] = num[n] = -∞.</p>
+<p>For example, in array [1, 2, 3, 1], 3 is a peak element and your function should return the index number 2.</p>
+<p>Note:</p>
+<p>Your solution should be in logarithmic complexity.</p>
+<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>“峰值元素”是指值大于邻居的元素</p>
+<p>输入一个数组num[i] ≠ num[i+1]，找到一个峰值元素并返回其下标。</p>
+<p>数组可能包含多个峰值，这种情况下返回其中任意一个即可。</p>
+<p>可以假设num[-1] = num[n] = -∞（开始元素的左侧和末尾元素的右侧均为负无穷大）<br>例如，数组[1, 2, 3, 1]中，3是峰值元素，你的函数应该返回下。标2<br>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/02/01/LeetCode-Find-Peak-Element/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java中-System-in-read-的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/01/java中-System-in-read-的用法/">java中 System.in.read()的用法</a>
+    </h1>
+  
+
+        
+        <a href="/2018/02/01/java中-System-in-read-的用法/" class="archive-article-date">
+  	<time datetime="2018-02-01T12:06:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 用读取键盘输入必须构建<br>  1。输入流   System.in;<br>  2。字符输入流   InputStreamReader<br>  3。缓存输入流   BufferedReader<br>  4。缓存输入流方法   readLine()//中文意思：读一行(遇上enter键)<br>  代码：BufferedReader   reader=new   BufferedReader(new   InputStreamReader(System.in));<br>System.in.read()返回一个整型字节数据，该数据表示的是字节因此是Unicode的第一个字节或是字符的ASCII码值。该方法是从一个流中一个一个的读取数据，因此是一个迭代的过程。我们可以看出in是一个静态的流，因此在该程序中只有一个流，重复调用System.in.read()实际上是在遍历该流中的每一个字节数据。最常见的流是键盘输入流。我们可以在键盘中输入一个字符串（其中按下回车键代表了两个字符\r\n,\r的ASCII码值是10，\n是13）。我们可以重复调用System.in.read()来读取从键盘输入的字符串中的字符所代表的字节（ASCII值）。<br>public final class System extends Object<br>System 类包含一些有用的类字段和方法。它不能被实例化。<br>在 System 类提供的设施中，有标准输入、标准输出和错误输出流；对外部定义的属性和环境变量的访问；加载文件和库的方法；还有快速复制数组的一部分的实用方法。<br>public static final InputStream in<br>“标准”输入流。此流已打开并准备提供输入数据。通常，此流对应于键盘输入或者由主机环境或用户指定的另一个输入源。<br>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/02/01/java中-System-in-read-的用法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-商" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
