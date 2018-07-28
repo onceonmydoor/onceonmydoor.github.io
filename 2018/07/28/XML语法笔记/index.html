@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://onceonmydoor.github.io">
-  <title>onceonmydoor</title>
+  <title>XML语法笔记 | onceonmydoor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="onceonmydoor">
-<meta property="og:url" content="https://onceonmydoor.github.io/page/2/index.html">
+  <meta name="description" content="##python爬虫 xpath语法笔记XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点是通过沿着路径 (path) 或者步 (steps) 来选取的。 ###使用方式：使用//获取整个页面中的元素，然后写标签名，然后再写词进行提取如：、、、xml//div[@class=”abc”]、、、 ###注意点：1./和//的区别，/代表只获取直接子节点。//获取子孙节点。一般//用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XML语法笔记">
+<meta property="og:url" content="https://onceonmydoor.github.io/2018/07/28/XML语法笔记/index.html">
 <meta property="og:site_name" content="onceonmydoor">
+<meta property="og:description" content="##python爬虫 xpath语法笔记XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点是通过沿着路径 (path) 或者步 (steps) 来选取的。 ###使用方式：使用//获取整个页面中的元素，然后写标签名，然后再写词进行提取如：、、、xml//div[@class=”abc”]、、、 ###注意点：1./和//的区别，/代表只获取直接子节点。//获取子孙节点。一般//用">
+<meta property="og:updated_time" content="2018-07-28T13:11:33.763Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="onceonmydoor">
+<meta name="twitter:title" content="XML语法笔记">
+<meta name="twitter:description" content="##python爬虫 xpath语法笔记XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点是通过沿着路径 (path) 或者步 (steps) 来选取的。 ###使用方式：使用//获取整个页面中的元素，然后写标签名，然后再写词进行提取如：、、、xml//div[@class=”abc”]、、、 ###注意点：1./和//的区别，/代表只获取直接子节点。//获取子孙节点。一般//用">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -147,33 +151,97 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-photo2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-XML语法笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/01/photo2/">photo2</a>
+    <h1 class="article-title" itemprop="name">
+      XML语法笔记
     </h1>
   
 
         
-        <a href="/2018/02/01/photo2/" class="archive-article-date">
-  	<time datetime="2018-02-01T13:18:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
+        <a href="/2018/07/28/XML语法笔记/" class="archive-article-date">
+  	<time datetime="2018-07-28T12:53:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/img/2.jpeg" alt="image"></p>
+        <p>##python爬虫 xpath语法笔记<br>XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点是通过沿着路径 (path) 或者步 (steps) 来选取的。</p>
+<p>###使用方式：<br>使用//获取整个页面中的元素，然后写标签名，然后再写词进行提取<br>如：<br>、、、xml<br>//div[@class=”abc”]<br>、、、</p>
+<p>###注意点：<br>1./和//的区别，/代表只获取直接子节点。//获取子孙节点。一般//用的比较多。当然也要视情况而定<br>2.contains:当某个属性包含多个值时，那么可以使用’contains’函数如：<br>、、、xml<br>//div[contains(@class,’job_detail’)]<br>、、、<br>3.谓词中的下标是从1开始的</p>
+<table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodename</td>
+<td>选取此节点的所有子节点。</td>
+</tr>
+<tr>
+<td>/</td>
+<td>从根节点选取。</td>
+</tr>
+<tr>
+<td>//</td>
+<td>从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</td>
+</tr>
+<tr>
+<td>.</td>
+<td>选取当前节点。</td>
+</tr>
+<tr>
+<td>..</td>
+<td>选取当前节点的父节点</td>
+</tr>
+<tr>
+<td>@</td>
+<td>选取属性。</td>
+</tr>
+</tbody>
+</table>
 
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -182,16 +250,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/01/photo2/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://onceonmydoor.github.io/2018/07/28/XML语法笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/23/蜕变/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">蜕变</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -212,286 +339,37 @@
 
 
 
-  
-    <article id="post-photo1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/01/photo1/">photo1</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/01/photo1/" class="archive-article-date">
-  	<time datetime="2018-02-01T12:35:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/img/1.jpeg" alt="image"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/01/photo1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-LeetCode-Find-Peak-Element" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/01/LeetCode-Find-Peak-Element/">[LeetCode]Find Peak Element</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/01/LeetCode-Find-Peak-Element/" class="archive-article-date">
-  	<time datetime="2018-02-01T12:13:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>A peak element is an element that is greater than its neighbors.</p>
-<p>Given an input array where num[i] ≠ num[i+1], find a peak element and return its index.</p>
-<p>The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.</p>
-<p>You may imagine that num[-1] = num[n] = -∞.</p>
-<p>For example, in array [1, 2, 3, 1], 3 is a peak element and your function should return the index number 2.</p>
-<p>Note:</p>
-<p>Your solution should be in logarithmic complexity.</p>
-<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>“峰值元素”是指值大于邻居的元素</p>
-<p>输入一个数组num[i] ≠ num[i+1]，找到一个峰值元素并返回其下标。</p>
-<p>数组可能包含多个峰值，这种情况下返回其中任意一个即可。</p>
-<p>可以假设num[-1] = num[n] = -∞（开始元素的左侧和末尾元素的右侧均为负无穷大）<br>例如，数组[1, 2, 3, 1]中，3是峰值元素，你的函数应该返回下。标2<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/01/LeetCode-Find-Peak-Element/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java中-System-in-read-的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/01/java中-System-in-read-的用法/">java中 System.in.read()的用法</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/01/java中-System-in-read-的用法/" class="archive-article-date">
-  	<time datetime="2018-02-01T12:06:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 用读取键盘输入必须构建<br>  1。输入流   System.in;<br>  2。字符输入流   InputStreamReader<br>  3。缓存输入流   BufferedReader<br>  4。缓存输入流方法   readLine()//中文意思：读一行(遇上enter键)<br>  代码：BufferedReader   reader=new   BufferedReader(new   InputStreamReader(System.in));<br>System.in.read()返回一个整型字节数据，该数据表示的是字节因此是Unicode的第一个字节或是字符的ASCII码值。该方法是从一个流中一个一个的读取数据，因此是一个迭代的过程。我们可以看出in是一个静态的流，因此在该程序中只有一个流，重复调用System.in.read()实际上是在遍历该流中的每一个字节数据。最常见的流是键盘输入流。我们可以在键盘中输入一个字符串（其中按下回车键代表了两个字符\r\n,\r的ASCII码值是10，\n是13）。我们可以重复调用System.in.read()来读取从键盘输入的字符串中的字符所代表的字节（ASCII值）。<br>public final class System extends Object<br>System 类包含一些有用的类字段和方法。它不能被实例化。<br>在 System 类提供的设施中，有标准输入、标准输出和错误输出流；对外部定义的属性和环境变量的访问；加载文件和库的方法；还有快速复制数组的一部分的实用方法。<br>public static final InputStream in<br>“标准”输入流。此流已打开并准备提供输入数据。通常，此流对应于键盘输入或者由主机环境或用户指定的另一个输入源。<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/01/java中-System-in-read-的用法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-商" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/01/商/">商</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/01/商/" class="archive-article-date">
-  	<time datetime="2018-02-01T11:23:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>骑马跨渠<br>二鬓霜白一瞬间<br>回首不见<br>往少年</p>
-<p>将军肚<br>鸭子步<br>三脂偏高<br>头晕<br>依旧笑迎东风<br>稳立商海<br>志不贫</p>
-<p>傲气<br>霸道如当年<br>不骗不诈我原则<br>让利平衡长久全</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/01/商/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
+ 
+ <!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2157129"></script>
+<!-- UY END -->
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+  
+  
+
+  
+
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = '[object Object]'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  
+
   
 
 
@@ -515,8 +393,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
