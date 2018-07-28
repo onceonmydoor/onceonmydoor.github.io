@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://onceonmydoor.github.io/"/>
-  <updated>2018-07-28T13:15:03.463Z</updated>
+  <updated>2018-07-28T13:47:37.145Z</updated>
   <id>https://onceonmydoor.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://onceonmydoor.github.io/2018/07/28/XML%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
     <id>https://onceonmydoor.github.io/2018/07/28/XML语法笔记/</id>
     <published>2018-07-28T12:53:01.000Z</published>
-    <updated>2018-07-28T13:15:03.463Z</updated>
+    <updated>2018-07-28T13:47:37.145Z</updated>
     
-    <content type="html"><![CDATA[<p>##python爬虫 xpath语法笔记<br>XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点是通过沿着路径 (path) 或者步 (steps) 来选取的。</p><p>###使用方式：<br>使用//获取整个页面中的元素，然后写标签名，然后再写词进行提取<br>如：<br>、、、xml<br>//div[@class=”abc”]<br>、、、<br><a id="more"></a></p><p>###注意点：<br>1./和//的区别，/代表只获取直接子节点。//获取子孙节点。一般//用的比较多。当然也要视情况而定<br>2.contains:当某个属性包含多个值时，那么可以使用’contains’函数如：<br>、、、xml<br>//div[contains(@class,’job_detail’)]<br>、、、<br>3.谓词中的下标是从1开始的</p><table><thead><tr><th>表达式</th><th>描述</th></tr></thead><tbody><tr><td>nodename</td><td>选取此节点的所有子节点。</td></tr><tr><td>/</td><td>从根节点选取。</td></tr><tr><td>//</td><td>从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</td></tr><tr><td>.</td><td>选取当前节点。</td></tr><tr><td>..</td><td>选取当前节点的父节点</td></tr><tr><td>@</td><td>选取属性。</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<h2 id="python爬虫-xpath语法笔记"><a href="#python爬虫-xpath语法笔记" class="headerlink" title="python爬虫 xpath语法笔记"></a>python爬虫 xpath语法笔记</h2><p>XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点是通过沿着路径 (path) 或者步 (steps) 来选取的。</p><h3 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h3><p>使用//获取整个页面中的元素，然后写标签名，然后再写词进行提取<br>如：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//div[@class="abc"]</span><br></pre></td></tr></table></figure></p><a id="more"></a><h3 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h3><p>1./和//的区别，/代表只获取直接子节点。//获取子孙节点。一般//用的比较多。当然也要视情况而定<br>2.contains:当某个属性包含多个值时，那么可以使用’contains’函数如：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//div[contains(@class,'job_detail')]</span><br></pre></td></tr></table></figure></p><p>3.谓词中的下标是从1开始的</p><table><thead><tr><th>表达式</th><th>描述</th></tr></thead><tbody><tr><td>nodename</td><td>选取此节点的所有子节点。</td></tr><tr><td>/</td><td>从根节点选取。</td></tr><tr><td>//</td><td>从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</td></tr><tr><td>.</td><td>选取当前节点。</td></tr><tr><td>..</td><td>选取当前节点的父节点</td></tr><tr><td>@</td><td>选取属性。</td></tr></tbody></table>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;##python爬虫 xpath语法笔记&lt;br&gt;XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点是通过沿着路径 (path) 或者步 (steps) 来选取的。&lt;/p&gt;
-&lt;p&gt;###使用方式：&lt;br&gt;使用//获取整个页面中的元素，然后写标签名，然后再写词进行提取&lt;br&gt;如：&lt;br&gt;、、、xml&lt;br&gt;//div[@class=”abc”]&lt;br&gt;、、、&lt;br&gt;
+      &lt;h2 id=&quot;python爬虫-xpath语法笔记&quot;&gt;&lt;a href=&quot;#python爬虫-xpath语法笔记&quot; class=&quot;headerlink&quot; title=&quot;python爬虫 xpath语法笔记&quot;&gt;&lt;/a&gt;python爬虫 xpath语法笔记&lt;/h2&gt;&lt;p&gt;XPath 使用路径表达式来选取 XML 文档中的节点或节点集。节点是通过沿着路径 (path) 或者步 (steps) 来选取的。&lt;/p&gt;
+&lt;h3 id=&quot;使用方式：&quot;&gt;&lt;a href=&quot;#使用方式：&quot; class=&quot;headerlink&quot; title=&quot;使用方式：&quot;&gt;&lt;/a&gt;使用方式：&lt;/h3&gt;&lt;p&gt;使用//获取整个页面中的元素，然后写标签名，然后再写词进行提取&lt;br&gt;如：&lt;br&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//div[@class=&quot;abc&quot;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
