@@ -170,7 +170,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##find_all的使用：<br>1.在提取标签的时候，第一个参数是标签的名字，<br>过滤，通过同关键字参数的形式传入<br>可以用’attrs’通过字典传入<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trs = soup.find_all(<span class="string">'tr'</span>,attrs=&#123;<span class="string">'class'</span>:<span class="string">'even'</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+        <h2 id="find-all的使用："><a href="#find-all的使用：" class="headerlink" title="find_all的使用："></a>find_all的使用：</h2><p>1.在提取标签的时候，第一个参数是标签的名字，<br>过滤，通过同关键字参数的形式传入<br>可以用’attrs’通过字典传入<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trs = soup.find_all(<span class="string">'tr'</span>,attrs=&#123;<span class="string">'class'</span>:<span class="string">'even'</span>&#125;)</span><br></pre></td></tr></table></figure></p>
 <p>2.可以用’limit’参数限制提取<br>3.<strong>注意</strong>：class标签要加_如代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trs =soup.find_all(<span class="string">'tr'</span>,class_=<span class="string">'even'</span>)</span><br></pre></td></tr></table></figure></p>
         
       
