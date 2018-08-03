@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://onceonmydoor.github.io/2018/08/01/BeautifulSoup笔记/index.html">
 <meta property="og:site_name" content="onceonmydoor">
 <meta property="og:description" content="find_all的使用：1.在提取标签的时候，第一个参数是标签的名字，过滤，通过同关键字参数的形式传入可以用’attrs’通过字典传入1trs = soup.find_all(&apos;tr&apos;,attrs=&amp;#123;&apos;class&apos;:&apos;even&apos;&amp;#125;) 2.可以用’limit’参数限制提取3.注意：class标签要加_如代码：1trs =soup.find_all(&apos;tr&apos;,class_=&apos;eve">
-<meta property="og:updated_time" content="2018-08-01T15:04:56.554Z">
+<meta property="og:updated_time" content="2018-08-01T15:13:09.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BeautifulSoup笔记">
 <meta name="twitter:description" content="find_all的使用：1.在提取标签的时候，第一个参数是标签的名字，过滤，通过同关键字参数的形式传入可以用’attrs’通过字典传入1trs = soup.find_all(&apos;tr&apos;,attrs=&amp;#123;&apos;class&apos;:&apos;even&apos;&amp;#125;) 2.可以用’limit’参数限制提取3.注意：class标签要加_如代码：1trs =soup.find_all(&apos;tr&apos;,class_=&apos;eve">
@@ -187,7 +187,7 @@
 <p>6.根据属性名字查找：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[name='username']</span>&#123;</span><br><span class="line">            <span class="attribute">background-color</span>: pink;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="BeautifulSoup-中使用css选择器"><a href="#BeautifulSoup-中使用css选择器" class="headerlink" title="BeautifulSoup 中使用css选择器"></a>BeautifulSoup 中使用css选择器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">trs =soup.select(<span class="string">'tr'</span>)</span><br><span class="line"><span class="keyword">for</span> tr <span class="keyword">in</span> trs:</span><br><span class="line">    infos =list(tr.stripped_strings)</span><br><span class="line">    print(infos)</span><br></pre></td></tr></table></figure>
 <p>获取所有的class等于even的tr标签<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">trs = soup.select(<span class="string">'tr.even'</span>)</span><br><span class="line">trs = soup.select(<span class="string">"tr[class='even']"</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="常见的四种对象："><a href="#常见的四种对象：" class="headerlink" title="常见的四种对象："></a>常见的四种对象：</h2><p>1.Tag： BS中所有的标签都是Tag类型，并且BS的对象其实本质上也是TAG类型<br>常用方法find、find_all<br>2.NavigableString ：继承自oython中str<br>3.BeautifulSoup:继承自TAG<br>4.Comments:继承自NavigableString</p>
+<h2 id="常见的四种对象："><a href="#常见的四种对象：" class="headerlink" title="常见的四种对象："></a>常见的四种对象：</h2><p>1.Tag： BS中所有的标签都是Tag类型，并且BS的对象其实本质上也是TAG类型<br>常用方法find、find_all<br>2.NavigableString ：继承自python中str<br>3.BeautifulSoup:继承自TAG<br>4.Comments:继承自NavigableString</p>
 <h2 id="contents和children："><a href="#contents和children：" class="headerlink" title="contents和children："></a>contents和children：</h2><p>返回某个标签下的直接子元素，contents返回来的是列表，children返回的是迭代器<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div = soup.find(<span class="string">'div'</span>)</span><br><span class="line">print(div.contents)</span><br></pre></td></tr></table></figure></p>
 
       
@@ -291,6 +291,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/08/03/正则表达式笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          正则表达式笔记
+        
+      </div>
+    </a>
   
   
     <a href="/2018/07/28/XML语法笔记/" id="article-nav-older" class="article-nav-link-wrap">
