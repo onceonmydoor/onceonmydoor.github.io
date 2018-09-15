@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://onceonmydoor.github.io/"/>
-  <updated>2018-08-27T15:45:22.841Z</updated>
+  <updated>2018-09-14T15:41:41.473Z</updated>
   <id>https://onceonmydoor.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>redis数据库</title>
+    <link href="https://onceonmydoor.github.io/2018/09/13/redis%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>https://onceonmydoor.github.io/2018/09/13/redis数据库/</id>
+    <published>2018-09-13T15:13:00.000Z</published>
+    <updated>2018-09-14T15:41:41.473Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><ul><li><p><strong>添加</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> [name] [参数]</span><br><span class="line">如：</span><br><span class="line"><span class="built_in">set</span> username abc</span><br></pre></td></tr></table></figure></li><li><p><strong>删除</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">del</span> key</span><br><span class="line">如：</span><br><span class="line"><span class="built_in">del</span> username</span><br></pre></td></tr></table></figure></li><li><p><strong>设置过期时间</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">expire key timeout(单位为秒)</span><br><span class="line">或在设置值的时候：</span><br><span class="line"><span class="built_in">set</span> key value EX timeout</span><br><span class="line">setex key <span class="built_in">time</span> value</span><br><span class="line">如：<span class="built_in">set</span> age <span class="number">19</span> EX <span class="number">60</span></span><br></pre></td></tr></table></figure></li><li><p><strong>查看过期时间</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ttl key</span><br></pre></td></tr></table></figure></li><li><p><strong>查看所有的key</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keys *</span><br></pre></td></tr></table></figure></li><li><p><strong>从左侧添加元素</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lpush key value</span><br></pre></td></tr></table></figure></li><li><p><strong>从右侧添加元素</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpush key value</span><br></pre></td></tr></table></figure></li><li><p><strong>查看列表中的元素</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lrange key <span class="built_in">start</span> stop</span><br><span class="line">如:</span><br><span class="line">lrange websites <span class="number">0</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure></li><li><p><strong>移除列表中的元素</strong></p><blockquote>   <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;移除并返回列表的头元素</span><br><span class="line">&gt;    lpop key</span><br><span class="line">&gt;移除并返回列表的尾元素</span><br><span class="line">&gt;    rpop key</span><br><span class="line">&gt;移除并返回列表中的中间元素：</span><br><span class="line">&gt;    lren key count value</span><br><span class="line">&gt;将count个值 个value去掉 count=<span class="number">0</span>时指所有，count&lt;<span class="number">0</span>时从表尾开始向表头搜索</span><br><span class="line">&gt;count&gt;<span class="number">0</span>时从表头开始向表尾搜索</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></blockquote></li><li><p><strong>获取第几个元素的值</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lindex key index</span><br></pre></td></tr></table></figure></li><li><p><strong>总共有几个元素</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">llen key</span><br></pre></td></tr></table></figure></li><li><p><strong>set 集合的操作</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">添加元素:</span><br><span class="line">sadd <span class="built_in">set</span> value1 valeu2</span><br><span class="line">查看元素：</span><br><span class="line">smembers <span class="built_in">set</span></span><br><span class="line">移除元素：</span><br><span class="line">sren <span class="built_in">set</span> member(因为集合是无序的所以只能指定)</span><br></pre></td></tr></table></figure></li><li><p><strong>集合的交并补运算</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">交集：</span><br><span class="line">siner set1 set2</span><br><span class="line">并集：</span><br><span class="line">sunion set1 set2</span><br><span class="line">差集：</span><br><span class="line">sdiff set1 set2</span><br><span class="line">**set1中set2没有的 即：set1减set2**</span><br></pre></td></tr></table></figure></li><li><p><strong>hash 哈希操作</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">添加新值:</span><br><span class="line">hset key field value </span><br><span class="line">field 和value为一对一关系</span><br><span class="line">获取对应的值:</span><br><span class="line">hget key field</span><br><span class="line">删除field中的某个field“</span><br><span class="line">hdel key field</span><br><span class="line">获取某个哈希中的所有值</span><br><span class="line">hgetall key</span><br><span class="line">所有value</span><br><span class="line">hvals key</span><br><span class="line">所有key </span><br><span class="line">hkeys key</span><br><span class="line">判断是否存在:</span><br><span class="line">hexists key field</span><br><span class="line">获取哈希中的键值对(数量):</span><br><span class="line">hlen field</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;字符串操作&quot;&gt;&lt;a href=&quot;#字符串操作&quot; class=&quot;headerlink&quot; title=&quot;字符串操作&quot;&gt;&lt;/a&gt;字符串操作&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;添加&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>&#39;photo3&#39;</title>
@@ -431,32 +454,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>商</title>
-    <link href="https://onceonmydoor.github.io/2018/02/01/%E5%95%86/"/>
-    <id>https://onceonmydoor.github.io/2018/02/01/商/</id>
-    <published>2018-02-01T11:23:14.000Z</published>
-    <updated>2018-02-02T08:34:01.145Z</updated>
-    
-    <content type="html"><![CDATA[<p>骑马跨渠<br>二鬓霜白一瞬间<br>回首不见<br>往少年</p><p>将军肚<br>鸭子步<br>三脂偏高<br>头晕<br>依旧笑迎东风<br>稳立商海<br>志不贫</p><p>傲气<br>霸道如当年<br>不骗不诈我原则<br>让利平衡长久全</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;骑马跨渠&lt;br&gt;二鬓霜白一瞬间&lt;br&gt;回首不见&lt;br&gt;往少年&lt;/p&gt;
-&lt;p&gt;将军肚&lt;br&gt;鸭子步&lt;br&gt;三脂偏高&lt;br&gt;头晕&lt;br&gt;依旧笑迎东风&lt;br&gt;稳立商海&lt;br&gt;志不贫&lt;/p&gt;
-&lt;p&gt;傲气&lt;br&gt;霸道如当年&lt;br&gt;不骗不诈我原则&lt;br&gt;让利平衡长久全&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="https://onceonmydoor.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

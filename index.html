@@ -150,6 +150,113 @@
             
 
   
+    <article id="post-redis数据库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/13/redis数据库/">redis数据库</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/13/redis数据库/" class="archive-article-date">
+  	<time datetime="2018-09-13T15:13:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><ul>
+<li><p><strong>添加</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> [name] [参数]</span><br><span class="line">如：</span><br><span class="line"><span class="built_in">set</span> username abc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>删除</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">del</span> key</span><br><span class="line">如：</span><br><span class="line"><span class="built_in">del</span> username</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>设置过期时间</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">expire key timeout(单位为秒)</span><br><span class="line">或在设置值的时候：</span><br><span class="line"><span class="built_in">set</span> key value EX timeout</span><br><span class="line">setex key <span class="built_in">time</span> value</span><br><span class="line">如：<span class="built_in">set</span> age <span class="number">19</span> EX <span class="number">60</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>查看过期时间</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ttl key</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>查看所有的key</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keys *</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>从左侧添加元素</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lpush key value</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>从右侧添加元素</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpush key value</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>查看列表中的元素</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lrange key <span class="built_in">start</span> stop</span><br><span class="line">如:</span><br><span class="line">lrange websites <span class="number">0</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>移除列表中的元素</strong></p>
+<blockquote>
+   <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;移除并返回列表的头元素</span><br><span class="line">&gt;    lpop key</span><br><span class="line">&gt;移除并返回列表的尾元素</span><br><span class="line">&gt;    rpop key</span><br><span class="line">&gt;移除并返回列表中的中间元素：</span><br><span class="line">&gt;    lren key count value</span><br><span class="line">&gt;将count个值 个value去掉 count=<span class="number">0</span>时指所有，count&lt;<span class="number">0</span>时从表尾开始向表头搜索</span><br><span class="line">&gt;count&gt;<span class="number">0</span>时从表头开始向表尾搜索</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p><strong>获取第几个元素的值</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lindex key index</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>总共有几个元素</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">llen key</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>set 集合的操作</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">添加元素:</span><br><span class="line">sadd <span class="built_in">set</span> value1 valeu2</span><br><span class="line">查看元素：</span><br><span class="line">smembers <span class="built_in">set</span></span><br><span class="line">移除元素：</span><br><span class="line">sren <span class="built_in">set</span> member(因为集合是无序的所以只能指定)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>集合的交并补运算</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">交集：</span><br><span class="line">siner set1 set2</span><br><span class="line">并集：</span><br><span class="line">sunion set1 set2</span><br><span class="line">差集：</span><br><span class="line">sdiff set1 set2</span><br><span class="line">**set1中set2没有的 即：set1减set2**</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>hash 哈希操作</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">添加新值:</span><br><span class="line">hset key field value </span><br><span class="line">field 和value为一对一关系</span><br><span class="line">获取对应的值:</span><br><span class="line">hget key field</span><br><span class="line">删除field中的某个field“</span><br><span class="line">hdel key field</span><br><span class="line">获取某个哈希中的所有值</span><br><span class="line">hgetall key</span><br><span class="line">所有value</span><br><span class="line">hvals key</span><br><span class="line">所有key </span><br><span class="line">hkeys key</span><br><span class="line">判断是否存在:</span><br><span class="line">hexists key field</span><br><span class="line">获取哈希中的键值对(数量):</span><br><span class="line">hlen field</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/13/redis数据库/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-photo3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -813,73 +920,9 @@
 
 
   
-    <article id="post-墓床" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/02/墓床/">墓床</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/02/墓床/" class="archive-article-date">
-  	<time datetime="2018-04-02T13:58:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我知道永逝降临，并不悲伤<br>松林中安放着我的愿望<br>下边有海，远看像水池<br>一点点跟我的是下午的阳光<br>　　<br>人时已尽，人世很长<br>我在中间应当休息<br>走过的人说树枝低了<br>走过的人说树枝在长</p>
-<pre><code>--顾城
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/02/墓床/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -995,11 +1038,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公文</a>
+                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
+                <a href="javascript:void(0)" class="js-tag color3">公文</a>
               </li>
              
               <li class="article-tag-list-item">
